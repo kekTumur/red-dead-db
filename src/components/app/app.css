@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Redemption';
+	src: url('../../fonts/Redemption.eot');
+	src: url('../../fonts/Redemption.woff') format('woff'), url('../../fonts/Redemption.ttf') format('truetype'), url('../../fonts/Redemption.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RDRLino';
+	src: url('../../fonts/RDRLino-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+}

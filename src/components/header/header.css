@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgb(58, 18, 18);
+    padding: 1em 0 1em;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-menu li {
+    list-style-type: none;
+}
+
+.header-menu li a {
+    font-family: RDRLino;
+    color: crimson;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.header-menu li a:hover,
+.logo a:hover {
+    background-color: rgba(71, 71, 71, 0.637);
+    border-radius: 5px;
+}
+
+.logo a {
+    padding: 7px;
+    font-family: Redemption;
+    font-size: 2em;
+    text-decoration: none;
+    color: crimson;   
+}

@@ -1,0 +1,38 @@
+.list {
+    background-color: #fff;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.list h2 {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background-color: #bb293c;
+    font-family: Redemption;
+    letter-spacing: 2px;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.list ul {
+    padding: 20px;
+}
+
+.list ul li {
+    cursor: pointer;
+    font-family: RDRLino;
+    text-transform: uppercase;
+    list-style: none;
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.list ul li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.list ul li:last-child {
+    border-bottom: none;
+}

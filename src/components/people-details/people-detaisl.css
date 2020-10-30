@@ -1,0 +1,32 @@
+.people-details {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.people-details-list {
+    padding: 15px;
+    list-style-type: none;
+}
+
+.people-details-list li {
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: RDRLino;
+    text-transform: uppercase;
+}
+
+.people-details .coverImage {
+    width: 200px;
+}
+
+.people-details .coverImage img {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 10px;
+}
+
+.people-details-list li:last-child {
+    border-bottom: none;
+}
