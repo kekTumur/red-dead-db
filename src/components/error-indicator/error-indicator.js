@@ -2,7 +2,7 @@ import React from 'react'
 
 const ErrorIndicator = () => {
     return (
-        <div class="alert alert-danger" role="alert">
+        <div className="alert">
             Something went wrong
         </div>
     );

@@ -19,5 +19,8 @@
 }
 
 body {
-	background-color: black;
+	background-color: #000000;
+	background-image:  radial-gradient(#f3070d 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#f3070d 0.9500000000000001px, #000000 0.9500000000000001px);
+	background-size: 38px 38px;
+	background-position: 0 0,19px 19px;
 }

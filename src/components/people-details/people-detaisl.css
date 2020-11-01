@@ -18,15 +18,62 @@
 }
 
 .people-details .coverImage {
-    width: 200px;
+    width: 250px;
+    padding: 15px;
 }
 
 .people-details .coverImage img {
     max-width: 100%;
-    min-height: 100%;
     border-radius: 10px;
 }
 
 .people-details-list li:last-child {
     border-bottom: none;
+}
+
+
+.accordion {
+    max-width: 240px;
+    
+    font-size: 15px;
+    text-transform: none;
+}
+
+.accordion .contentBx {
+    position: relative;
+}
+
+.accordion .contentBx .label {
+    padding: 10px;
+    background-color: rgb(58, 18, 18);
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion .contentBx .label::after {
+    content: '+';
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::after {
+    content: '-';
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: .3s;
+}
+
+.accordion .contentBx.active .content {
+    height: 100px;
+    padding: 10px;
 }
