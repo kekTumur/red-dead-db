@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import Spinner from '../spinner';
 import './people-detaisl.css';
 
 class PeopleDetails extends Component {
@@ -15,10 +16,14 @@ class PeopleDetails extends Component {
             };
         });
     }
-    
+
     render() {
-        const { peopleList, currentCharacter } = this.props;
+        const { peopleList, currentCharacter, loading } = this.props;
         const { accordionClassName } = this.state;
+
+        if (loading) {
+            return <Spinner />;
+        }
 
         if (peopleList.length < 1) {
             return <h2>Select person from list</h2>
@@ -54,8 +59,8 @@ class PeopleDetails extends Component {
     }   
 }
 
-const mapStateToProps = ({ currentCharacter, peopleList }) => {
-    return { currentCharacter, peopleList };
+const mapStateToProps = ({ currentCharacter, peopleList, loading }) => {
+    return { currentCharacter, peopleList, loading };
 };
 
 export default connect(mapStateToProps)(PeopleDetails);

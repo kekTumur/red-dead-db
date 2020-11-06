@@ -14,7 +14,7 @@
     width: 14.16px;
     height: 14.16px;
     border-radius: 50%;
-    background: #599cb0;
+    background: #750808;
     animation: ldio-fxndvbcxiz 1s linear infinite;
   }.ldio-fxndvbcxiz div:nth-child(1) > div {
     left: 87px;
@@ -99,7 +99,5 @@
   .ldio-fxndvbcxiz div { box-sizing: content-box; }
   
   div .center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 20px auto 0;
   }

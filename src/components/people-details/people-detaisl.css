@@ -34,7 +34,6 @@
 
 .accordion {
     max-width: 240px;
-    
     font-size: 15px;
     text-transform: none;
 }
@@ -44,10 +43,10 @@
 }
 
 .accordion .contentBx .label {
+    cursor: pointer;
     padding: 10px;
     background-color: rgb(58, 18, 18);
     color: white;
-    cursor: pointer;
     position: relative;
 }
 
@@ -66,6 +65,7 @@
 }
 
 .accordion .contentBx .content {
+    cursor: default;
     position: relative;
     height: 0;
     overflow: hidden;
@@ -76,4 +76,29 @@
 .accordion .contentBx.active .content {
     height: 100px;
     padding: 10px;
+}
+
+@media (max-width: 953px) {
+    .people-details {
+        width: 80%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 619px) {
+    .people-details-list {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .people-details {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 380px) {
+    .people-details {
+        width: 100%;
+    }
 }

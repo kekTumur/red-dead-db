@@ -1,15 +1,21 @@
 const initialState = {
     peopleList: [],
-    currentCharacter: "6"
+    currentCharacter: "0",
+    loading: true
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'PEOPLE_LOADED':
-            console.log(action.payload);
             return {
                 ...state,
-                peopleList: action.payload
+                peopleList: action.payload,
+                loading: false
+            }
+        case 'PERSON_CLICKED':
+            return {
+                ...state,
+                currentCharacter: action.payload
             }
         default:
             return state;

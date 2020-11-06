@@ -2,20 +2,24 @@ import React, { Component } from 'react'
 import './people-list.css';
 import withRedeadService from '../hoc';
 import { connect } from 'react-redux';
-import { peopleListLoaded } from '../../actions';
+import { peopleListLoaded, personClicked } from '../../actions';
+import Spinner from '../spinner';
 
 class PeopleList extends Component {
 
     componentDidMount() {
         this.props.reddeadService
             .getItems('characters')
-            .then(res => {
-                this.props.peopleListLoaded(res);
-            });
+            .then(this.props.peopleListLoaded);
     }
 
     render() {
-        const { peopleList } = this.props;
+        const { peopleList, personClicked, loading } = this.props;
+        
+        if (loading) {
+            return <Spinner />
+        } 
+
         return (
             <div className="list">
                 <h2>Characters</h2>
@@ -23,7 +27,8 @@ class PeopleList extends Component {
                     {
                         peopleList.map(({id, name}) => {
                             return (
-                                <li key={id}>
+                                <li key={id}
+                                    onClick={() => personClicked(id)}>
                                     {name}
                                 </li>
                             );
@@ -35,14 +40,14 @@ class PeopleList extends Component {
     }
 }
 
-const mapStateToProps = ({ peopleList }) => {
-    return { peopleList };
+const mapStateToProps = ({ peopleList, loading }) => {
+    return { peopleList, loading };
 };
 
 const mapDispatchToProps = {
-    peopleListLoaded
+    peopleListLoaded,
+    personClicked
 };
-
 
 export default withRedeadService()(
     connect(mapStateToProps, mapDispatchToProps)(PeopleList))

@@ -1,3 +1,7 @@
 .alert {
-    color: white;
+    color: crimson;
+    font-family: Redemption;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1em;
 }

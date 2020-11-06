@@ -36,3 +36,16 @@
 .list ul li:last-child {
     border-bottom: none;
 }
+
+@media (max-width: 953px) {
+    .list {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 380px) {
+    .list {
+        width: 100%;
+    }
+}

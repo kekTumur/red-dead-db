@@ -5,6 +5,14 @@ const peopleListLoaded = (peopleList) => {
     }    
 };
 
+const personClicked = (id) => {
+    return {
+        type: 'PERSON_CLICKED',
+        payload: id
+    };
+};
+
 export {
-    peopleListLoaded
+    peopleListLoaded,
+    personClicked
 };

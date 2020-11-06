@@ -5,4 +5,30 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1115px) {
+    .container {
+        padding: 0 20px 0;
+    }
+}
+
+@media (max-width: 953px) {
+    .container {
+        padding: 0 40px 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 619px) {
+    .container {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 0 20px 0;
+    }
 }
